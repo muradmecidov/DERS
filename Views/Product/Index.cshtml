@@ -1,0 +1,26 @@
+﻿@using WebApplication1.Models;
+@using WebApplication1.Models.Product;
+@model List<Product>
+
+
+@*@foreach(var item in Model){
+<div class="card-body">
+    <h5 class="card-title">@item.Id</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+</div>
+}*@
+
+
+
+@foreach(var item in Model){
+<div class="card" style="width: 18rem;">
+        <img src="https://www.soliton.az/images/articles/2023/02/01/20230201123321740_c2_8.jpg" class="card-img-top">
+    <div class="card-body">
+            <h5 class="card-title">@item.Name  @item.ReleaseDate</h5>
+            <h5 class="card-title">@($"{item.Price} AZN")</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+</div>
+}
